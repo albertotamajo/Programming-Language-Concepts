@@ -1,2 +1,2 @@
 # Programming-Language-Concepts
-:school: University of Southampton - Programming Language Concepts (COMP2212) - Courseworks - 2020/2021
+This repository contains the Handins for the **COMP2212-Programming Language Concepts* courseworks
