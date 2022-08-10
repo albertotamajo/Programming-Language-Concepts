@@ -1,0 +1,66 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 42bba71aedca72e04d7cd42bd1496498b1670d9039bb0fce65a1cde1779d14f6
+
+name:           SQL-like
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/albertotamajo/SQL-like#readme>
+homepage:       https://github.com/albertotamajo/SQL-like#readme
+bug-reports:    https://github.com/albertotamajo/SQL-like/issues
+author:         Alberto Tamajo
+maintainer:     at2n19@soton.ac.uk
+copyright:      University of Southampton
+license:        BSD3
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/albertotamajo/SQL-like
+
+library
+  exposed-modules:
+      Grammar
+      Lib
+      Tokens
+  other-modules:
+      Paths_SQL_like
+  hs-source-dirs:
+      src
+  build-depends:
+      array
+    , base
+  default-language: Haskell2010
+
+executable csvql
+  main-is: Main.hs
+  other-modules:
+      Paths_SQL_like
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      SQL-like
+    , ansi-terminal
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite SQL-like-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_SQL_like
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , SQL-like
+    , base >=4.7 && <5
+  default-language: Haskell2010
